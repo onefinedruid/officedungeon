@@ -1,0 +1,29 @@
+Text-based RPG to be run in console using Node.js;
+
+0 - Premise: "Dungeon Crawler (Office Edition)"
+
+1 - Systems:
+        - Movement (Sim)
+        - Interactions (Choice)
+        - Inventory
+        - Combat/Health
+
+--------------------------------------------------
+
+- Save game object file in node fs
+        // Writing...
+                var fs = require("fs");
+                var myJson = {
+                        key: "myvalue"
+                };
+
+                fs.writeFile( "filename.json", JSON.stringify( myJson ), "utf8", yourCallback );
+
+        // And then, to read it...
+                myJson = require("./filename.json");
+
+--------------------------------------------------
+
+TODO:
+- Input loop
+- Finish Menu functions
