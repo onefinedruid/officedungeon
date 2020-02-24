@@ -2,33 +2,34 @@
 var readlineSync = require('readline-sync');   
 var Player = require('./Player');
 // Application startup
-console.log(Date() + "\nGame started.....\n\n");
+console.log(Date() + "\nGame started.....\n");
 // Main Artwork
-console.log("Office Dungeon\n");
+console.log("Office Dungeon\n\n> Welcome, n00b.");
 
-// Main game
+// Main Program
 var userCommand;
-userCommand = readlineSync.prompt();
-while ((userCommand !== "menu") || (userCommand !== "Menu") || (userCommand !== "MENU")) {
-    if ((userCommand == "menu") || (userCommand == "Menu") || (userCommand == "MENU"))
-        break;
-    else {
-        if ((userCommand == "help") || (userCommand == "Help") || (userCommand == "HELP"))
-            { 
-            console.log("Enter \"menu\" to view game options.");
-            userCommand = readlineSync.prompt();
-            }
-        else
-            userCommand = readlineSync.prompt();
-    }
-}
 Menu();
 console.log("**Load room 1 instructions\n");
 console.log("***Load input loop\n\n");
 console.log("...Game Closed");
 
-// Local functions
+
+// Local Functions
 function Menu() {
+    userCommand = readlineSync.prompt();
+    while ((userCommand !== "menu") || (userCommand !== "Menu") || (userCommand !== "MENU")) {
+        if ((userCommand == "menu") || (userCommand == "Menu") || (userCommand == "MENU"))
+            break;
+        else {
+            if ((userCommand == "help") || (userCommand == "Help") || (userCommand == "HELP"))
+                { 
+                console.log("Enter \"menu\" to view game options.");
+                userCommand = readlineSync.prompt();
+                }
+            else
+                userCommand = readlineSync.prompt();
+        }
+    }
     menu_display = ['SAVE', 'LOAD', 'NEW GAME', 'QUIT'];
     menu_select = readlineSync.keyInSelect(menu_display, 'Select Option >> ');
     switch (menu_display[menu_select]) {
@@ -51,11 +52,11 @@ function Menu() {
             break;
     };
 };
+
 function createPlayer() {
     var playerName = readlineSync.question("Enter name: ");
-    player0ne = new Player;
+    player0ne = new Player; // members: name, level, room, health, showStats()
     player0ne.name = playerName;
-    // player0ne.showStats();
+    player0ne.showStats();
 }
-
 // Eof
