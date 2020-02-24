@@ -4,7 +4,7 @@ var Player = require('./Player');
 // Application startup
 console.log(Date() + "\nGame started.....\n\n");
 // Main Artwork
-console.log("--DUNGEON CRAWL--\n*Office Edition*\n");
+console.log("Office Dungeon\n");
 
 // Main game
 var userCommand;
@@ -23,11 +23,14 @@ while ((userCommand !== "menu") || (userCommand !== "Menu") || (userCommand !== 
     }
 }
 Menu();
+console.log("**Load room 1 instructions\n");
+console.log("***Load input loop\n\n");
+console.log("...Game Closed");
 
 // Local functions
 function Menu() {
     menu_display = ['SAVE', 'LOAD', 'NEW GAME', 'QUIT'];
-    menu_select = readlineSync.keyInSelect(menu_display, 'Main Menu >> ');
+    menu_select = readlineSync.keyInSelect(menu_display, 'Select Option >> ');
     switch (menu_display[menu_select]) {
         case menu_display[0]:
             console.log("Game saved!");
@@ -52,6 +55,7 @@ function createPlayer() {
     var playerName = readlineSync.question("Enter name: ");
     player0ne = new Player;
     player0ne.name = playerName;
+    // player0ne.showStats();
 }
 
 // Eof
