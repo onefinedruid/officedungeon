@@ -4,7 +4,13 @@ var Player = require('./Player');
 // Application startup
 console.log(Date() + "\nGame started.....\n");
 // Main Artwork
-console.log("Office Dungeon\n\n> Welcome, n00b.");
+console.log("  /***/ /****//****/ /*/ /****/ /****/");
+console.log(" / / / /***/ /***/  / / / /__  / **/");
+console.log("/___/ /_/   /_/    /_/ /____/ /_____/");
+console.log("  /**\\  /*/*/ /**\\  /*/ /****/ /****/  /***/ /**\\  /*/");
+console.log(" / / / / / / / /\\ \\/ / / /**/ / **/   / / / / /\\ \\/ /");
+console.log("/___/ /___/ /_/  \\__/ /____/ /_____/ /___/ /_/  \\__/");
+console.log("\n> Welcome, n00b.");
 
 // Main Program
 var userCommand;
