@@ -30,10 +30,12 @@ while ((userCommand !== "menu") || (userCommand !== "Menu") || (userCommand !== 
             userCommand = readlineSync.prompt();
     }
 }
-console.log("**Load room 1 instructions");
-console.log("***Load input loop");
+// Load room 1 instructions
+console.log("You are in the lobby.")
+userCommand = readlineSync.prompt();
+// Load input loop
+    // figure this part out...
 console.log("...Game Closed");
-
 
 // Local Functions
 function Menu() {
