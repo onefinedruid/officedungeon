@@ -62,6 +62,10 @@ function Menu() {
 
 function createPlayer() {
     var playerName = readlineSync.question("Enter name: ");
+    while (playerName == "") {
+		console.log("PlayerName cannot be blank!");
+		playerName = readlineSync.question("Enter name: ");
+	};
     player0ne = new Player; // members: name, level, room, health, showStats()
     player0ne.name = playerName;
     player0ne.showStats();
