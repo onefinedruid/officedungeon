@@ -1,12 +1,27 @@
 Text-based RPG to be run in console using Node.js;
 
 0 - Premise: "Dungeon Crawler (Office Edition)"
+	: Developing a JS text-adventure ustilizing ECS.
+	: Goal is to make gameplay flexible and data/event driven (avoiding OOP)
 
-1 - Systems:
-        - Movement (Sim)
-        - Interactions (Choice)
-        - Inventory
-        - Combat/Health
+1 - Systems:			
+	- I/O - done
+	- Menu - done
+	- Entity creation - done
+	- Entity destruction
+	- Combat
+	- Health
+	- Map creation / generation
+	- Item spawning
+	- Enemy spawning
+
+2 - Components:			
+	COMBAT
+		- InvokesCombat
+
+3 - Entity:			
+	- Add component
+	- remove component
 
 --------------------------------------------------
 
@@ -25,5 +40,8 @@ Text-based RPG to be run in console using Node.js;
 --------------------------------------------------
 
 TODO:
-- Input loop
-- Finish Menu functions
+   - Create UPDATE_LOOP
+	- Systems work like "phases".
+	- Updates all systems at end of input "turn".
+	- Components have default flags that get changed wehn entites interact.
+	- 
