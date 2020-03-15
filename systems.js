@@ -23,11 +23,28 @@ class IOSystem extends System {
 class MenuSystem extends System {
     MainMenu() {
         console.log("");
-        console.log("save");
         console.log("load");
         console.log("new game");
         console.log("quit");
         console.log("")
+    }
+    GameMenu() {
+        console.log("");
+        console.log("save");
+        console.log("load");
+        console.log("quit");
+        console.log("")
+    }
+    ShowArt() {
+        console.log("");
+        console.log("* * * * * * * * * * * * * * * * * * * * * * * * * * * * *")
+        console.log("  /***/ /****//****/ /*/ /****/ /****/");
+        console.log(" / / / /***/ /***/  / / / /__  / **/");
+        console.log("/___/ /_/   /_/    /_/ /____/ /_____/");
+        console.log("  /**\\  /*/*/ /**\\  /*/ /****/ /****/  /***/ /**\\  /*/");
+        console.log(" / / / / / / / /\\ \\/ / / /**/ / **/   / / / / /\\ \\/ /");
+        console.log("/___/ /___/ /_/  \\__/ /____/ /_____/ /___/ /_/  \\__/\n");
+        console.log("* * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n");
     }
 }
 
