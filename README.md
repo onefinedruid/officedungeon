@@ -6,6 +6,7 @@
 - Game commands:
     - `help` - sometimes offers hint
     - `menu` - shows menu commands (tba)
+    - `show art` - displays game art
     - `new game` - starts new game
     - `look` - description of dungeon
     - `walk` (direction)' - moves 1 pace in "x" direction
